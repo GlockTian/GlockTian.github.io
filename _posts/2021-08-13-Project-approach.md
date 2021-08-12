@@ -2,7 +2,7 @@
 layout: post
 title: "Design Project Implementation"
 subtitle: "What I did to set up"
-date: 2020-08-13 10:09:13 -0400
+date: 2021-08-13 10:09:13 -0400
 background: '/img/posts/01.jpg'
 ---
 
