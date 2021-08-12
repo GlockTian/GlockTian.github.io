@@ -1,0 +1,37 @@
+I"V<p>How I find different approaches in designing and implementing a scheduling application</p>
+
+<p>Source: GithubLink</p>
+
+<p>When I approaches my first project:</p>
+
+<ol>
+  <li>design the data structure → design the components → design the highest level algorithm</li>
+  <li>design the highest level algorithm  → design the components → design the data structure</li>
+</ol>
+
+<p>However, both of them are too naive.</p>
+
+<p><strong>the former approach</strong> creates a lot of unnecessary building blocks (unused method, inconvenient use of data structure).  It is not good to design the low-level architecture (choice for data type, function and etc. ) before we figure out the high level requirement.</p>
+
+<p><strong>the latter approach</strong> is sightly better, but creates a lot of constraint in data structure, as they needs to fit the high level design decision.</p>
+
+<p>The above cases occur because the high level design and low level design are too closely connected together. To solved it we can apply the dependency inversion principle.</p>
+
+<h2 id="dependency-inversion">Dependency Inversion</h2>
+
+<p>Definition from Wikipedia:</p>
+
+<p>a specific form of loosely coupling software modules.</p>
+
+<p>Notion: High level module should be independent of the low-level modules.</p>
+
+<p>This also increases the reusability, and testability  of the code.</p>
+
+<h2 id="proposed-approach">Proposed Approach:</h2>
+
+<p>Design the building blocks → design the algorithm and data structure</p>
+
+<p>Design the interface first allows the team to create an outline of  different tasks in the project</p>
+
+<p>In this approach, tasks can be separate into smaller sizes and start simultaneously at the same time. This require a lot of planning ahead of the implementation, but can increase the quality of the products by implementing testing early in the project phase.</p>
+:ET
