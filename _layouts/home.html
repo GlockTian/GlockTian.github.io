@@ -29,16 +29,6 @@ layout: default
 
         {{ content }}
 
-        {% if page.intro %}
-        <h1>
-          Something About Me
-        </h1>
-        <p>
-          {{ page.intro }}
-        </p>
-        {% endif %}
-
-        <hr>
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
 
