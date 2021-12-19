@@ -4,6 +4,7 @@ title: "Design Project Implementation"
 subtitle: "How I find different approaches in designing and implementing a scheduling application"
 date: 2021-08-13 10:09:13 -0400
 background: '/img/posts/02.jpg'
+tags: [Design, Project Management]
 ---
 
 Source: GithubLink
