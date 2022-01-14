@@ -4,7 +4,7 @@ title: "About two way binding in blazor"
 subtitle: "A usage of two way binding in one my project experience"
 date: 2021-12-18 10:09:13 -0400
 background: '/img/posts/02.jpg'
-tags: [Olympic, C#, web]
+tags: [Olympic, C#]
 ---
 
 Q: Why happened? Why do I need it in the project?

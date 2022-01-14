@@ -4,7 +4,7 @@ title: "Flutter TTRPG Blog note"
 subtitle: "A flutter project for TTRPG character creation and skill/status check"
 date: 2021-12-18 10:09:16 -0400
 background: '/img/posts/02.jpg'
-tags: [Personal Project, Flutter, Web]
+tags: [Flutter, Personal Project]
 ---
 
 ## Project Link:
