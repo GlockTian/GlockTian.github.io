@@ -9,15 +9,13 @@ tags: [Flutter, Personal Project]
 
 ## Project Link:
 
-[https://glocktian.github.io/ttrpg_web_github_page/](https://glocktian.github.io/ttrpg_web_github_page/#/)
+[https://glocktian.github.io/ttrpg_web_github_page/#/](https://glocktian.github.io/ttrpg_web_github_page/#/)
 
 ## Logical Pixel:
 
-in the flutter documentation we have for the [size](https://api.flutter.dev/flutter/widgets/MediaQueryData/size.html) property:
+In the flutter documentation we have for the [size](https://api.flutter.dev/flutter/widgets/MediaQueryData/size.html) property:
 
-Logical pixels are roughly the same visual size across devices. Physical pixels are the size of the actual hardware pixels on the device. The number of physical pixels per logical pixel is described by the [devicePixelRatio](https://api.flutter.dev/flutter/widgets/MediaQueryData/devicePixelRatio.html).
-
-This helps us to have roughly the same size across devices.
+Logical pixels are roughly the same visual size across devices. Physical pixels are the size of the actual hardware pixels on the device. The number of physical pixels per logical pixel is described by the [devicePixelRatio](https://api.flutter.dev/flutter/widgets/MediaQueryData/devicePixelRatio.html). This helps us to have roughly the same size across devices.
 
 ## Elements in web and mobile
 
@@ -52,7 +50,7 @@ Note it might be tricky to adjust the height of the item in GridView, the key is
 
 Option2: row in listView
 
-using ListView means we don't need to worry about the childAspectRatio when we want to set the height.
+Using ListView means we don't need to worry about the childAspectRatio when we want to set the height.
 
 ```dart
 ListView.builder(
@@ -76,7 +74,7 @@ ListView.builder(
 ),
 ```
 
-But notice it is hard to deal with index in this method, the code may get too complicated for a simple tasks.
+But notice it might be hard to deal with index in this method, translation between index and row number is required.
 
 Notice that Option 1 and 2 can both handle large number of items (or even infinite), because they build children on demand.
 
@@ -100,7 +98,7 @@ child: EditProperty(property:widget.properties[index],onChanged:widget.onChanged
 
 Wrap works similar to Column or Row, but it works when we run out of room at the end of Column or Row. 
 
-The common use cases are chips or buttons, where the number of elements are relatively small, and the children items required to be displayed every thing all at once.
+The common use cases are chips or buttons, where the number of elements are relatively small, and the children items required to be displayed every thing all at once. Also notice the list of widget doesn’t need to be of same size.
 
 Option4: Third Party Library
 
@@ -131,13 +129,11 @@ WaterfallFlow.builder(
 );
 ```
 
-Notice that in flutter, [pub.dev](http://pub.dev) is a good place to go to, when you want to start.
+Notice that in flutter, [pub.dev](http://pub.dev) is a good place to go to.
 
 ## Cropping image
 
-There are quite a number of packages from [pub.dev](http://pub.dev) that allow features for cropping images, but note that some packages may not support all devices.
-
-There are a number of cropping 
+There are quite a number of packages from [pub.dev](http://pub.dev) that allow features for cropping images, but note that some packages may not support all devices.  The package I used in this project is crop_your_image: ^0.6.0+1. 
 
 ## Deployment
 
@@ -146,3 +142,33 @@ flutter build web --release --base-href /ttrpg_web_github_page/ --web-renderer h
 ```
 
 the base-href is not / in my case, as I didn't use the default GitHub page [which has been used for blog post]. I change it to the repo name instead of just /.
+
+## lesson learned:
+
+Please remember to commit data before you leave
+
+## About theme:
+
+### Some interesting behaviour
+
+Some widgets may have different coloring behaviour in light or dark mode such as appbar.
+
+![Untitled](/img\posts\flutter_ttrpg\appbar_comment.png)
+
+### The colorScheme and its 13 properties:
+
+![Untitled](/img\posts\flutter_ttrpg\color_scheme.png)
+
+This is an attempt in following Material UI principle. These parameter can be found in [https://material.io/design/color/the-color-system.html](https://material.io/design/color/the-color-system.html)
+
+Please notice there are numbers of articles over the internet that doesn’t use colorScheme because this is relatively new in the community (flutter changes a lot).  There are also many existing packages that doesn’t use colorscheme when they render the components (Some of them just use the primaryColor in the ThemeData).
+
+```dart
+// code using primaryColor, assumes developer use the primaryColor parameter in the app's ThemeData
+_fabColor = widget.fabColor ?? Theme.of(context).primaryColor;
+
+// code using colorScehem, fab is recommended to use the secondary color of the theme
+fabColor: Theme.of(context).colorScheme.secondary,
+```
+
+Note: that in material ui, we suggest the FloatingActionButton to use the secondary color of the color scheme.
