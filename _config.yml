@@ -31,21 +31,21 @@ comments:
 # You must install utterances github app before use.(https://github.com/apps/utterances)
 # Make sure all variables are set properly. Check below link for detail.
 # https://utteranc.es/
-utterances:
-  repo:                "LazyRen/LazyRen.github.io"
-  issue-term:          "pathname"
-  label:               "Comments"
-  theme:               "dark-blue"
+# utterances:
+#   repo:                "LazyRen/LazyRen.github.io"
+#   issue-term:          "pathname"
+#   label:               "Comments"
+#   theme:               "dark-blue"
 
-# You must install giscus github app before use.(https://github.com/apps/giscus)
-# Make sure all variables are set properly. Check below link for detail.
-# https://giscus.vercel.app/
-giscus:
-  repo:                "LazyRen/LazyRen.github.io"
-  repo-id:             "[your-repo-id]"
-  category:            "Comments"
-  category-id:         "[your-category-id]"
-  mapping:             "pathname"
-  reaction-enabled:    "1"
-  theme:               "dark_dimmed"
-  crossorigin:         "anonymous"
+# # You must install giscus github app before use.(https://github.com/apps/giscus)
+# # Make sure all variables are set properly. Check below link for detail.
+# # https://giscus.vercel.app/
+# giscus:
+#   repo:                "LazyRen/LazyRen.github.io"
+#   repo-id:             "[your-repo-id]"
+#   category:            "Comments"
+#   category-id:         "[your-category-id]"
+#   mapping:             "pathname"
+#   reaction-enabled:    "1"
+#   theme:               "dark_dimmed"
+#   crossorigin:         "anonymous"
