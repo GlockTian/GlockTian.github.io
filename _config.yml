@@ -24,6 +24,11 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
 
+kramdown:
+  math_engine:         mathjax
+  math_engine_opts:    {}
+  footnote_backlink:   '&#x21a9;&#xfe0e;'
+
 # Set which comment system to use
 comments:
   # 'disqus' or 'utterances' are available
