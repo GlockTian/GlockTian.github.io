@@ -44,8 +44,8 @@ Tian Zhong
 ## Education
 
 ### `The University of Auckland`
-- **Bachelor of Software Engineering (Honours)** 2019-2023 (expected)
-- Current **GPA 7.92**
+- **Bachelor of Software Engineering (Honours)** 2019-2022 (expected)
+- Current **GPA 7.92/9.0**
 <hr/>
 
 ## Interests and activities
@@ -60,7 +60,7 @@ Tian Zhong
 
 ## Skills
 
-- **Version Control & Cooperation:** git, GitHub	, Azure
+- **Version Control & Cooperation:** git, GitHub, Azure
 - **Mobile Development:** Flutter, Google Firebase, objective-c, swift-UI
 - **Programming Language:** Python, Java, Dart, C#
 - **Operating System Related:** Linux/bash, docker
