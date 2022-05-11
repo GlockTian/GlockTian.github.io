@@ -44,7 +44,7 @@ Tian Zhong
 ## Education
 
 ### `The University of Auckland`
-- **Bachelor of Software Engineering (Honours)** 2019-2022 (expected)
+- **Bachelor of Software Engineering (Honours)** 2019-2022
 - Current **GPA 7.92/9.0**
 <hr/>
 
