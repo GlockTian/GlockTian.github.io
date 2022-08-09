@@ -11,7 +11,9 @@ This is an interesting idea.
 ## What did I do?
 
 ```js
+<script>
   window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+</script>
 ```
 
 Just a simiple way, future work: investigating other redirecting options.
