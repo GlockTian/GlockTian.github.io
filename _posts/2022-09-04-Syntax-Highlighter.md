@@ -2,7 +2,7 @@
 layout: post
 title: "Syntax Highlighter"
 subtitle: "Highlightjs"
-date: 2022-08-08 21:45:13 -0400
+date: 2022-09-04 13:45:13 -0400
 background: '/img/posts/06.jpg'
 tags: [JavaScript, Highlightjs]
 ---
