@@ -28,14 +28,14 @@ tags: [JavaScript]
     transform: translateX(0);
   }
   .parent {
-    min-height: 40px;
-    width: 40px;
+    height: 400px;
+    width: 400px;
     background-color: #f1f1f1;
   }
   .child {
     width: 50%;
     height: 50%;
-    background-color: blue;
+    background-color: black;
     border-radius: 50%;
     animation: move-around 1s ease-in-out infinite;
   }
