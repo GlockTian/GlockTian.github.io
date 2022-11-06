@@ -42,10 +42,10 @@ tags: [JavaScript]
         entry.target.classList.remove("show");
       }
     });
-  })；
+  });
   const hidden = document.querySelectorAll(".hidden");
   hidden.forEach((element) => {
     observer.observe(element);
-  });
+  })
 </script>
   
