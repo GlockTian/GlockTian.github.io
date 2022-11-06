@@ -23,6 +23,8 @@ tags: [JavaScript]
   }
   .show {
     opacity: 1 !important;
+    filter: blur(0px);
+    transform: translateX(0);
   }
   </style>
 </head>
