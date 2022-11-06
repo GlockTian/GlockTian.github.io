@@ -29,12 +29,37 @@ tags: [JavaScript]
   </style>
 </head>
 <section class="hidden">
-  <h1>Section 1</h1>
-  <p>Some text</p>
+  <h1>CSS section</h1>
+  <code>
+    .hidden {
+      opacity: 0;
+      filter: blur(10px);
+      transform: translateX(-100%);
+      transition: all 1s;
+    }
+    .show {
+      opacity: 1 !important;
+      filter: blur(0px);
+      transform: translateX(0);
+    }
+  </code>
 </section>
 <section class="hidden">
-  <h1>Section 2</h1>
-  <p>Some text</p>
+  <h1>JavaScript section</h1>
+  <code>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+  const hidden = document.querySelectorAll(".hidden");
+  hidden.forEach((element) => {
+    observer.observe(element);
+  })
 </section>
 <script>
   const observer = new IntersectionObserver((entries) => {
