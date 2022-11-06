@@ -36,7 +36,6 @@ tags: [JavaScript]
     width: 50%;
     height: 50%;
     background-color: black;
-    border-radius: 50%;
     animation: move-around 1s ease-in-out infinite;
   }
   .parent:hover .child {
@@ -63,23 +62,23 @@ tags: [JavaScript]
 </head>
 <section class="hidden">
   <h1>CSS section</h1>
-  <code>
-    .hidden {
-      opacity: 0;
-      filter: blur(10px);
-      transform: translateX(-100%);
-      transition: all 1s;
-    }
-    .show {
-      opacity: 1 !important;
-      filter: blur(0px);
-      transform: translateX(0);
-    }
-  </code>
+  ```js
+      .hidden {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-100%);
+        transition: all 1s;
+      }
+      .show {
+        opacity: 1 !important;
+        filter: blur(0px);
+        transform: translateX(0);
+      }
+  ```
 </section>
 <section class="hidden">
   <h1>JavaScript section</h1>
-  <code>
+```js
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -93,29 +92,48 @@ tags: [JavaScript]
   hidden.forEach((element) => {
     observer.observe(element);
   })
+```
 </section>
 <section class="hidden">
 <h1>Simple Animation Section</h1>
   <div class="parent">
     <div class="child">
-      <code>
-        .parent {
-          min-height: 40px;
-          width: 40px;
-        }
-        .child {
-          width: 50%;
-          height: 50%;
-          background-color: #f00;
-          border-radius: 50%;
-        }
-        .parent:hover .child {
-          width: 100%;
-          height: 100%;
-        }
     </div>
   </div>
-
+```js
+    .parent {
+      height: 400px;
+      width: 400px;
+      background-color: #f1f1f1;
+    }
+    .child {
+      width: 50%;
+      height: 50%;
+      background-color: black;
+      animation: move-around 1s ease-in-out infinite;
+    }
+    .parent:hover .child {
+      animation-play-state: paused;
+    }
+    @keyframes move-around {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(100%, 0);
+      }
+      50% {
+        transform: translate(100%, 100%);
+      }
+      75% {
+        transform: translate(0, 100%);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+```
+</section>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
