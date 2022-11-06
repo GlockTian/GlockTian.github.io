@@ -27,6 +27,38 @@ tags: [JavaScript]
     filter: blur(0px);
     transform: translateX(0);
   }
+  .parent {
+    min-height: 40px;
+    width: 40px;
+    background-color: #f1f1f1;
+  }
+  .child {
+    width: 50%;
+    height: 50%;
+    background-color: blue;
+    border-radius: 50%;
+    animation: move-around 1s ease-in-out infinite;
+  }
+  .parent:hover .child {
+    animation-play-state: paused;
+  }
+  @keyframes move-around {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(100%, 0);
+    }
+    50% {
+      transform: translate(100%, 100%);
+    }
+    75% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
   </style>
 </head>
 <section class="hidden">
@@ -62,6 +94,28 @@ tags: [JavaScript]
     observer.observe(element);
   })
 </section>
+<section class="hidden">
+<h1>Simple Animation Section</h1>
+  <div class="parent">
+    <div class="child">
+      <code>
+        .parent {
+          min-height: 40px;
+          width: 40px;
+        }
+        .child {
+          width: 50%;
+          height: 50%;
+          background-color: #f00;
+          border-radius: 50%;
+        }
+        .parent:hover .child {
+          width: 100%;
+          height: 100%;
+        }
+    </div>
+  </div>
+
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
