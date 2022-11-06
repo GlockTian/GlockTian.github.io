@@ -9,19 +9,20 @@ tags: [JavaScript]
 
 <head>
 <style>
-  .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  section {
+    display: grid;
+    place-items: center;
     align-items: center;
-    height: 100vh;
-  }
-  .show {
-    opacity: 1;
+    min-height: 100vh;
   }
   .hidden {
     opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
     transition: all 1s;
+  }
+  .show {
+    opacity: 1 !important;
   }
   </style>
 </head>
