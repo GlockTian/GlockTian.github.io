@@ -8,6 +8,7 @@ tags: [JavaScript]
 ---
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css">
 <style>
   section {
     display: grid;
